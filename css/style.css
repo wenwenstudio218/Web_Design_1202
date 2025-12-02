@@ -35,7 +35,7 @@ body {
 }
 
 .hero {
-    background-image: url(./images/banner.jpg);
+    background-image: url(../images/banner.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -199,7 +199,7 @@ body {
 }
 
 .features {
-    background-image: url(./images/handbg.jpg);
+    background-image: url(../images/handbg.jpg);
     background-repeat: no-repeat;
     /* height: 800px; */
     background-position: top;
