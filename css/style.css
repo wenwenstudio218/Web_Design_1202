@@ -84,16 +84,33 @@ img {
 
 .left-bar {
     background-color: #fff;
+    color: #333;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 300px;
+    font-family: inherit;
+}
+
+.left-bar::placeholder {
     color: rgb(166, 166, 166);
-    padding: 10px 100px 10px 10px;
 }
 
 .right-bar {
     background-color: rgb(68, 68, 68);
-    padding: 10px 30px;
-    p {
-        letter-spacing: 2px;
-    }
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: background-color 0.3s;
+}
+
+.right-bar:hover {
+    background-color: #333;
 }
 
 .service {
@@ -134,7 +151,6 @@ img {
 .service-item-4 {
     padding: 25px 40px 25px 25px;
     flex: 1;
-    /* 讓每個項目平均分配寬度 */
 }
 
 .service-item-1 {
@@ -352,23 +368,21 @@ footer {
         font-size: 40px;
     }
 
-    /* 搜尋欄在手機上堆疊 */
-    .search-bar {
-        flex-direction: column;
-        width: 100%;
-    }
+        .search-bar {
+            flex-direction: column;
+            width: 100%;
+            margin-left: 0;
+        }
 
-    .left-bar {
-        width: 100%;
-        padding: 15px;
-        box-sizing: border-box;
-    }
+        .left-bar {
+            width: 100%;
+            margin-bottom: 10px;
+            text-align: center;
+        }
 
-    .right-bar {
-        width: 100%;
-        text-align: center;
-        margin-top: 10px;
-    }
+        .right-bar {
+            width: 100%;
+        }
 
     .service-item-1,
     .service-item-2,
