@@ -164,12 +164,9 @@
         const backToTopBtn = document.getElementById('backToTopBtn');
         const targetSection = document.getElementById('news-section');
 
-        // 監聽滾動事件
         window.addEventListener('scroll', () => {
             if (targetSection) {
-                // 取得目標區塊距離頂部的位置
                 const sectionTop = targetSection.offsetTop;
-                // 當捲軸高度 (scrollY) 超過該區塊位置時顯示按鈕
                 if (window.scrollY >= sectionTop) {
                     backToTopBtn.classList.add('show');
                 } else {
@@ -178,10 +175,8 @@
             }
         });
 
-        // 監聽點擊事件
         backToTopBtn.addEventListener('click', (e) => {
-            e.preventDefault(); // 防止預設的跳轉行為
-            // 平滑捲動回頂端
+            e.preventDefault(); 
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
