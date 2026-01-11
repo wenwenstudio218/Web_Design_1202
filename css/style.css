@@ -4,10 +4,20 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: rgb(43, 43, 43);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .nav {
@@ -18,6 +28,7 @@ body {
     padding: 10px 60px;
 }
 .nav-logo {
+    max-width: 150px;
     margin-left: 20px;
 }
 .nav-menu ul {
@@ -49,6 +60,7 @@ body {
 .hero-text {
     color: #fff;
     margin-left: 20px;
+    max-width: 600px;
 }
 
 .hero-text h1 {
@@ -116,24 +128,29 @@ body {
     height: 50px;
 }
 
+.service-item-1,
+.service-item-2,
+.service-item-3,
+.service-item-4 {
+    padding: 25px 40px 25px 25px;
+    flex: 1;
+    /* 讓每個項目平均分配寬度 */
+}
+
 .service-item-1 {
     background-color: #ff6600;
-    padding: 25px 40px 25px 25px;
 }
 
 .service-item-2 {
     background-color: #f1341f;
-    padding: 25px 40px 25px 25px;
 }
 
 .service-item-3 {
     background-color: #313131;
-    padding: 25px 40px 25px 25px;
 }
 
 .service-item-4 {
     background-color: #767676;
-    padding: 25px 40px 25px 25px;
 }
 
 .about {
@@ -158,6 +175,7 @@ body {
     color: #fff;
     font-size: 12px;
     letter-spacing: 2px;
+    display: inline-block;
 }
 
 .folio {
@@ -201,9 +219,11 @@ body {
 .features {
     background-image: url(../images/handbg.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
     /* height: 800px; */
     background-position: top;
     padding: 60px 140px;
+    min-height: 600px;
     
 }
 .features .container {
@@ -212,17 +232,19 @@ body {
     align-items: center;
     margin-top: 320px;
     margin-bottom: 40px;
+    gap: 25px;
 }
 
 .features-item {
     background-color: #fff;
-    margin-right: 25px;
+    /* margin-right: 25px; */
     padding: 25px 30px 50px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: #767676 1px solid;
+    flex: 1;
 }
 
 .features-item h4 {
@@ -241,4 +263,130 @@ footer {
     text-align: center;
     padding: 35px;
     font-size: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .nav,
+    .hero,
+    .service,
+    .folio,
+    .features,
+    .about {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .about {
+        padding: 60px 50px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-logo {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+
+    .nav-menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-menu ul li {
+        margin: 5px 10px;
+    }
+
+    .hero {
+        height: auto;
+        padding: 80px 30px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-text {
+        margin-left: 0;
+    }
+
+    .search-bar {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .service-container {
+        flex-wrap: wrap;
+    }
+
+    .service-item-1,
+    .service-item-2,
+    .service-item-3,
+    .service-item-4 {
+        flex: 0 0 50%;
+    }
+
+    .about {
+        padding: 60px 20px;
+    }
+
+    .folio .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features .container {
+        margin-top: 150px;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    /* 搜尋欄在手機上堆疊 */
+    .search-bar {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .left-bar {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .right-bar {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .service-item-1,
+    .service-item-2,
+    .service-item-3,
+    .service-item-4 {
+        flex: 0 0 100%;
+    }
+
+    .folio .container {
+        grid-template-columns: 1fr;
+    }
+
+    .features .container {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .features-item {
+        width: 100%;
+    }
 }
