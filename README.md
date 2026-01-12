@@ -1,4 +1,3 @@
-# Web_Design_1202
-前端網頁實作練習_2025
+# 前端網頁實作練習
 
-![網頁截圖](./images/index-screenshot.png)
+![網頁截圖](./images/index_screenshot.png)
